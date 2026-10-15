@@ -1,0 +1,45 @@
+timestamp,location,ssid,bssid,signal_percent,signal_dbm_est,channel,frequency_mhz,band,security,platform
+2026-10-01T14:00:00Z,Lobby,CorpWiFi,aa:bb:cc:03:0b:05,70,-65,1,2412,2.4GHz,WPA2,Demo
+2026-10-01T14:01:00Z,Lobby,CorpWiFi,aa:bb:cc:03:0b:05,68,-66,1,2412,2.4GHz,WPA2,Demo
+2026-10-01T14:02:00Z,Lobby,CorpWiFi,aa:bb:cc:0a:18:22,76,-62,6,2437,2.4GHz,WPA2,Demo
+2026-10-01T14:03:00Z,Lobby,CorpWiFi,aa:bb:cc:0a:18:22,74,-63,6,2437,2.4GHz,WPA2,Demo
+2026-10-01T14:04:00Z,Lobby,CorpWiFi,aa:bb:cc:11:25:3f,74,-63,11,2462,2.4GHz,WPA2,Demo
+2026-10-01T14:05:00Z,Lobby,CorpWiFi,aa:bb:cc:11:25:3f,72,-64,11,2462,2.4GHz,WPA2,Demo
+2026-10-01T14:06:00Z,Lobby,CorpWiFi,aa:bb:cc:18:32:5c,70,-65,36,5180,5GHz,WPA2,Demo
+2026-10-01T14:07:00Z,Lobby,CorpWiFi,aa:bb:cc:18:32:5c,84,-58,36,5180,5GHz,WPA2,Demo
+2026-10-01T14:08:00Z,Hallway,CorpWiFi,aa:bb:cc:13:2b:45,46,-77,6,2437,2.4GHz,WPA2,Demo
+2026-10-01T14:09:00Z,Hallway,CorpWiFi,aa:bb:cc:13:2b:45,56,-72,6,2437,2.4GHz,WPA2,Demo
+2026-10-01T14:10:00Z,Hallway,CorpWiFi,aa:bb:cc:1a:38:62,44,-78,11,2462,2.4GHz,WPA2,Demo
+2026-10-01T14:11:00Z,Hallway,CorpWiFi,aa:bb:cc:1a:38:62,44,-78,11,2462,2.4GHz,WPA2,Demo
+2026-10-01T14:12:00Z,Hallway,CorpWiFi,aa:bb:cc:21:45:7f,46,-77,36,5180,5GHz,WPA2,Demo
+2026-10-01T14:13:00Z,Hallway,CorpWiFi,aa:bb:cc:21:45:7f,50,-75,36,5180,5GHz,WPA2,Demo
+2026-10-01T14:14:00Z,Hallway,CorpWiFi,aa:bb:cc:28:52:9c,50,-75,40,5200,5GHz,WPA2,Demo
+2026-10-01T14:15:00Z,Hallway,CorpWiFi,aa:bb:cc:28:52:9c,60,-70,40,5200,5GHz,WPA2,Demo
+2026-10-01T14:16:00Z,Office 1,CorpWiFi,aa:bb:cc:23:4b:85,76,-62,11,2462,2.4GHz,WPA2,Demo
+2026-10-01T14:17:00Z,Office 1,CorpWiFi,aa:bb:cc:23:4b:85,92,-54,11,2462,2.4GHz,WPA2,Demo
+2026-10-01T14:18:00Z,Office 1,CorpWiFi,aa:bb:cc:2a:58:a2,82,-59,36,5180,5GHz,WPA2,Demo
+2026-10-01T14:19:00Z,Office 1,CorpWiFi,aa:bb:cc:2a:58:a2,92,-54,36,5180,5GHz,WPA2,Demo
+2026-10-01T14:20:00Z,Office 1,CorpWiFi,aa:bb:cc:31:65:bf,88,-56,40,5200,5GHz,WPA2,Demo
+2026-10-01T14:21:00Z,Office 1,CorpWiFi,aa:bb:cc:31:65:bf,82,-59,40,5200,5GHz,WPA2,Demo
+2026-10-01T14:22:00Z,Office 1,CorpWiFi,aa:bb:cc:38:72:dc,90,-55,44,5220,5GHz,WPA2,Demo
+2026-10-01T14:23:00Z,Office 1,CorpWiFi,aa:bb:cc:38:72:dc,84,-58,44,5220,5GHz,WPA2,Demo
+2026-10-01T14:24:00Z,Office 2,CorpWiFi,aa:bb:cc:33:6b:c5,60,-70,36,5180,5GHz,WPA2,Demo
+2026-10-01T14:25:00Z,Office 2,CorpWiFi,aa:bb:cc:33:6b:c5,64,-68,36,5180,5GHz,WPA2,Demo
+2026-10-01T14:26:00Z,Office 2,CorpWiFi,aa:bb:cc:3a:78:e2,72,-64,40,5200,5GHz,WPA2,Demo
+2026-10-01T14:27:00Z,Office 2,CorpWiFi,aa:bb:cc:3a:78:e2,70,-65,40,5200,5GHz,WPA2,Demo
+2026-10-01T14:28:00Z,Office 2,CorpWiFi,aa:bb:cc:41:85:ff,68,-66,44,5220,5GHz,WPA2,Demo
+2026-10-01T14:29:00Z,Office 2,CorpWiFi,aa:bb:cc:41:85:ff,64,-68,44,5220,5GHz,WPA2,Demo
+2026-10-01T14:30:00Z,Office 2,CorpWiFi,aa:bb:cc:48:92:1c,66,-67,1,2412,2.4GHz,WPA2,Demo
+2026-10-01T14:31:00Z,Office 2,CorpWiFi,aa:bb:cc:48:92:1c,70,-65,1,2412,2.4GHz,WPA2,Demo
+2026-10-01T14:32:00Z,Warehouse,CorpWiFi,aa:bb:cc:43:8b:05,30,-85,40,5200,5GHz,WPA2,Demo
+2026-10-01T14:33:00Z,Warehouse,CorpWiFi,aa:bb:cc:43:8b:05,30,-85,40,5200,5GHz,WPA2,Demo
+2026-10-01T14:34:00Z,Warehouse,CorpWiFi,aa:bb:cc:4a:98:22,40,-80,44,5220,5GHz,WPA2,Demo
+2026-10-01T14:35:00Z,Warehouse,CorpWiFi,aa:bb:cc:4a:98:22,30,-85,44,5220,5GHz,WPA2,Demo
+2026-10-01T14:36:00Z,Warehouse,CorpWiFi,aa:bb:cc:51:a5:3f,38,-81,1,2412,2.4GHz,WPA2,Demo
+2026-10-01T14:37:00Z,Warehouse,CorpWiFi,aa:bb:cc:51:a5:3f,38,-81,1,2412,2.4GHz,WPA2,Demo
+2026-10-01T14:38:00Z,Storage Closet,CorpWiFi,aa:bb:cc:53:ab:45,44,-78,44,5220,5GHz,WPA2,Demo
+2026-10-01T14:39:00Z,Storage Closet,CorpWiFi,aa:bb:cc:53:ab:45,36,-82,44,5220,5GHz,WPA2,Demo
+2026-10-01T14:40:00Z,Storage Closet,CorpWiFi,aa:bb:cc:5a:b8:62,50,-75,1,2412,2.4GHz,WPA2,Demo
+2026-10-01T14:41:00Z,Storage Closet,CorpWiFi,aa:bb:cc:5a:b8:62,52,-74,1,2412,2.4GHz,WPA2,Demo
+2026-10-01T14:42:00Z,Storage Closet,CorpWiFi,aa:bb:cc:61:c5:7f,38,-81,6,2437,2.4GHz,WPA2,Demo
+2026-10-01T14:43:00Z,Storage Closet,CorpWiFi,aa:bb:cc:61:c5:7f,48,-76,6,2437,2.4GHz,WPA2,Demo

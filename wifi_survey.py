@@ -14,6 +14,12 @@ Usage:
         Log continuously for 5 minutes, one scan every 10 seconds, tagged
         "Lobby". Walk the site, changing --location at each spot you measure.
 
+    python wifi_survey.py guided --locations "Lobby,Hallway,Office 1"
+        Step through each location: the script prompts you to walk to each
+        spot and press Enter, then scans and tags the reading with that
+        location automatically. --locations also accepts a text file
+        (one location per line).
+
     python wifi_survey.py scan --ssid "OfficeNet"
         Only show/log one SSID (useful when surveying a specific deployment).
 
@@ -223,6 +229,53 @@ def print_table(rows):
             r["band"] or "-", (r["security"] or "")[:24]))
 
 
+def parse_locations(spec):
+    """Turn --locations into a list of location labels.
+
+    Accepts either a comma-separated list ("Lobby,Hallway,Office 1") or a
+    path to a text file with one location per line (blank lines and lines
+    starting with # are ignored).
+    """
+    if os.path.exists(spec):
+        locs = []
+        with open(spec, encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    locs.append(line)
+        return locs
+    return [s.strip() for s in spec.split(",") if s.strip()]
+
+
+def run_guided(args):
+    locs = parse_locations(args.locations)
+    if not locs:
+        print("error: no locations found in %r" % args.locations, file=sys.stderr)
+        sys.exit(1)
+    filt = args.ssid.lower()
+    print("guided survey: %d location(s) — walk to each spot, press Enter to scan."
+          % len(locs))
+    total = 0
+    try:
+        for i, loc in enumerate(locs, 1):
+            input("(%d/%d) Walk to '%s', press Enter to scan... " % (i, len(locs), loc))
+            rows, err = scan()
+            if err:
+                print("scan failed at '%s': %s" % (loc, err), file=sys.stderr)
+                continue
+            rows = [r for r in rows if not filt or r["ssid"].lower() == filt]
+            if not rows:
+                print("no networks found at '%s'%s" % (
+                    loc, " matching '%s'" % args.ssid if filt else ""))
+                continue
+            n = append_csv(rows, loc)
+            total += n
+            print("logged %d readings for '%s'" % (n, loc))
+    except (KeyboardInterrupt, EOFError):
+        print("\nstopped.")
+    print("done: %d readings -> %s" % (total, CSV_PATH))
+
+
 def main():
     ap = argparse.ArgumentParser(description="Wi-Fi site survey scanner")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -237,8 +290,18 @@ def main():
     p_watch.add_argument("--duration", type=int, default=5, help="total minutes to log")
     p_watch.add_argument("--ssid", default="", help="only log this SSID")
 
+    p_guided = sub.add_parser("guided", help="step through several locations")
+    p_guided.add_argument("--locations", required=True,
+                          help='comma-separated list ("Lobby,Hallway,Office 1") '
+                               "or path to a text file (one location per line)")
+    p_guided.add_argument("--ssid", default="", help="only log this SSID")
+
     args = ap.parse_args()
     filt = args.ssid.lower()
+
+    if args.cmd == "guided":
+        run_guided(args)
+        return
 
     if args.cmd == "scan":
         rows, err = scan()
